@@ -8,10 +8,14 @@ public class Player : Mortal
     private void OnEnable()
     {
         GameManager.BeginTurn += ResetState;
+        GameManager.FirstTurn += ResetState;
+        GameManager.FirstTurn += ResetStrength;
     }
     private void OnDisable()
     {
         GameManager.BeginTurn -= ResetState;
+        GameManager.FirstTurn -= ResetState;
+        GameManager.FirstTurn -= ResetStrength;
     }
 
     // Start is called before the first frame update
@@ -24,6 +28,11 @@ public class Player : Mortal
     void Update()
     {
         
+    }
+
+    private void ResetStrength()
+    {
+        _strength = 0;
     }
 
     private void ResetState()

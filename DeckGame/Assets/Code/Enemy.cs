@@ -24,6 +24,7 @@ public class Enemy : Mortal
         GameManager.EndTurn += ResetIntention;
         GameManager.EndTurn += GetPoisoned;
         GameManager.BeginTurn += ShowIntention;
+        GameManager.FirstTurn += ShowIntention;
     }
     private void OnDisable()
     {
@@ -31,6 +32,7 @@ public class Enemy : Mortal
         GameManager.EndTurn -= ResetIntention;
         GameManager.EndTurn -= GetPoisoned;
         GameManager.BeginTurn -= ShowIntention;
+        GameManager.FirstTurn -= ShowIntention;
     }
 
     // Start is called before the first frame update

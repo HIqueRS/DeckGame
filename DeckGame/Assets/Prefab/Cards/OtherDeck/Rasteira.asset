@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81c0ce91a023834cb911b43106c91d1, type: 3}
   m_Name: Rasteira
   m_EditorClassIdentifier: 
-  Name: 
-  Energy: 0
-  Type: 
-  Descryption: 
+  Name: Rasteira
+  Energy: 2
+  Type: ATQ
+  Descryption: Ataque 7 + Defesa 7
   Image: {fileID: 0}
-  Damage: 0
-  Shield: 0
+  Damage: 7
+  Shield: 7
   Poison: 0
   Strength: 0

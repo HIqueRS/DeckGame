@@ -66,15 +66,22 @@ public class Mortal : MonoBehaviour
         {
             _poison = 0;
         }
+
+        if (_health <= 0)
+        {
+            Die();
+        }
+
+        SetHealthBar();
     }
 
     public void SetPoison(int i)
     {
-        _poison = i;
+        _poison += i;
     }
     public void SetStrength(int i)
     {
-        _strength = i;
+        _strength += i;
     }
 
     public void GetDamage(int i)

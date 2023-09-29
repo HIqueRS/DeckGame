@@ -7,6 +7,8 @@ public class Deck : MonoBehaviour
 
     [SerializeField]
     public List<ScriptableCard> _deck;
+    public List<ScriptableCard> _deckIronclad;
+    public List<ScriptableCard> _deckTest;
 
     [SerializeField]
     private TMPro.TextMeshProUGUI _numberText;
@@ -25,19 +27,25 @@ public class Deck : MonoBehaviour
 
     public Deck OtherStack;
 
+    private int _currentDeck;
+
 
     private void OnEnable()
     {
         GameManager.BeginTurn += InitializeHand;
+        GameManager.FirstTurn += FirstTurn;
     }
     private void OnDisable()
     {
         GameManager.BeginTurn -= InitializeHand;
+        GameManager.FirstTurn -= FirstTurn;
     }
 
     // Start is called before the first frame update
     void Start()
     {
+
+        _currentDeck = GameManager.Instance._currentDeck;
 
         _hasCard = new bool[5];
 
@@ -45,6 +53,7 @@ public class Deck : MonoBehaviour
 
         Shuffle();
 
+       
         
 
         UpdateNumber();
@@ -61,6 +70,33 @@ public class Deck : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void FirstTurn()
+    {
+        
+        StartCoroutine( WaitFirstTurn());
+    }
+
+    private IEnumerator WaitFirstTurn()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        _currentDeck = GameManager.Instance._currentDeck;
+
+        switch (_currentDeck)
+        {
+            case 0: _deck = _deckIronclad;
+                break;
+
+            case 1: _deck = _deckTest;
+                break;
+
+            default:
+                break;
+        }
+
+        InitializeHand();
     }
 
     private void InitializeHand()

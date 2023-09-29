@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: PowerUp Punch
   Energy: 2
   Type: ATQ
-  Descryption: Ataque 5
+  Descryption: Ataque 5 + Strength 3
   Image: {fileID: 7482667652216324306, guid: 880a9256b7ed96245bcce074db957223, type: 3}
   Damage: 5
   Shield: 0

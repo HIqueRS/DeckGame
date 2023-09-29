@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int Energy;
 
     public static event Action BeginTurn;
+    public static event Action FirstTurn;
 
     public static event Action EndTurn;
     public static event Action PauseGame;
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
 
-        _isPause = false;
+        //_isPause = false;
     }
 
     public void PauseGameInvoke()
@@ -51,7 +52,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BeginTurn?.Invoke();
+        //BeginTurn?.Invoke();
+        if(!_isPause)
+            FirstTurn?.Invoke();
 
         
     }
@@ -97,5 +100,11 @@ public class GameManager : MonoBehaviour
     private void GamePaused()
     {
         _isPause = true;
+    }
+
+    public void UnpauseGame()
+    {
+        _isPause = false;
+        FirstTurn?.Invoke();
     }
 }

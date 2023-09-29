@@ -1016,6 +1016,8 @@ MonoBehaviour:
   _healthBar: {fileID: 2447015215158560649}
   _healthText: {fileID: 1126576295550977057}
   _shieldText: {fileID: 7204643191874264401}
+  _strength: 0
+  _poison: 0
   _dangerZone: {fileID: 7853466723934591857}
   _actions:
   - {fileID: 11400000, guid: 7bf33ab251b3eeb448904e82babbd191, type: 2}
@@ -1155,7 +1157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.01000005, y: 0.009000003}
+  m_AnchoredPosition: {x: -0.107, y: 0.042}
   m_SizeDelta: {x: 0.2, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7701385227539193667

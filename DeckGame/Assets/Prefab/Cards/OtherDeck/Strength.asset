@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81c0ce91a023834cb911b43106c91d1, type: 3}
   m_Name: Strength
   m_EditorClassIdentifier: 
-  Name: S
+  Name: Strength
   Energy: 1
   Type: DEF
   Descryption: Strenght 2

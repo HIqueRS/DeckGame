@@ -395,6 +395,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _deck: []
+  _deckIronclad: []
+  _deckTest: []
   _numberText: {fileID: 614280596}
   _cardObject: {fileID: 0}
   _handPositions: []
@@ -735,6 +737,7 @@ MonoBehaviour:
   Energy: 3
   _energyText: {fileID: 1170413367}
   _isPause: 0
+  _currentDeck: 0
 --- !u!1 &614280594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1056,28 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05cdf0d2edeb2c548ba98ff71f894a79, type: 2}
   - {fileID: 11400000, guid: f0f415274e12cf840b552ff349032296, type: 2}
   - {fileID: 11400000, guid: 7d57c778d07733a45adc7811670a984c, type: 2}
+  _deckIronclad:
+  - {fileID: 11400000, guid: 906af355a5368d74ba191d8721e01b78, type: 2}
+  - {fileID: 11400000, guid: 906af355a5368d74ba191d8721e01b78, type: 2}
+  - {fileID: 11400000, guid: 906af355a5368d74ba191d8721e01b78, type: 2}
+  - {fileID: 11400000, guid: 906af355a5368d74ba191d8721e01b78, type: 2}
+  - {fileID: 11400000, guid: 05cdf0d2edeb2c548ba98ff71f894a79, type: 2}
+  - {fileID: 11400000, guid: 05cdf0d2edeb2c548ba98ff71f894a79, type: 2}
+  - {fileID: 11400000, guid: 05cdf0d2edeb2c548ba98ff71f894a79, type: 2}
+  - {fileID: 11400000, guid: 05cdf0d2edeb2c548ba98ff71f894a79, type: 2}
+  - {fileID: 11400000, guid: f0f415274e12cf840b552ff349032296, type: 2}
+  - {fileID: 11400000, guid: 7d57c778d07733a45adc7811670a984c, type: 2}
+  _deckTest:
+  - {fileID: 11400000, guid: 19a6885147ea9cf4da8db8467e9f5ffe, type: 2}
+  - {fileID: 11400000, guid: a978c84614e1e194fbc9f12c03e18c70, type: 2}
+  - {fileID: 11400000, guid: 616a8accdff32e74193ac2571bfb278a, type: 2}
+  - {fileID: 11400000, guid: 860615e88ad493f488e99b3249af3690, type: 2}
+  - {fileID: 11400000, guid: 316274a67a6675d43939a4a32eee1591, type: 2}
+  - {fileID: 11400000, guid: deeaee8bfac188d4ba90401186fdada5, type: 2}
+  - {fileID: 11400000, guid: 906af355a5368d74ba191d8721e01b78, type: 2}
+  - {fileID: 11400000, guid: 906af355a5368d74ba191d8721e01b78, type: 2}
+  - {fileID: 11400000, guid: 05cdf0d2edeb2c548ba98ff71f894a79, type: 2}
+  - {fileID: 11400000, guid: 05cdf0d2edeb2c548ba98ff71f894a79, type: 2}
   _numberText: {fileID: 1122819346}
   _cardObject: {fileID: 8590104791791547305, guid: dd45adb52bc73de4fbc5d4ee68223f29, type: 3}
   _handPositions:

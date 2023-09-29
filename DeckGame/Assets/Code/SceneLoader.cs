@@ -24,6 +24,9 @@ public class SceneLoader : MonoBehaviour
 
     [SerializeField]
     private GameObject _resetCanvas;
+
+    [SerializeField]
+    private int _currentDeck;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,11 +41,20 @@ public class SceneLoader : MonoBehaviour
 
     private void OnEnable()
     {
-        GameManager.BeginTurn += GetEnemy;
+        
+        GameManager.FirstTurn += SetCurrentDeck;
+        GameManager.FirstTurn += GetEnemy;
     }
     private void OnDisable()
     {
-        GameManager.BeginTurn -= GetEnemy;
+       
+        GameManager.FirstTurn -= SetCurrentDeck;
+        GameManager.FirstTurn -= GetEnemy;
+    }
+
+    private void SetCurrentDeck()
+    {
+        GameManager.Instance._currentDeck = _currentDeck;
     }
 
     private void GetEnemy()
@@ -60,6 +72,8 @@ public class SceneLoader : MonoBehaviour
         {
             if (!_isMenu)
             {
+
+                
                 TestToFinish();
                 TestToRetry();
             }
@@ -132,9 +146,16 @@ public class SceneLoader : MonoBehaviour
     {
         _isMenu = true;
 
+        _currentScene = i;
+
         SceneManager.LoadScene(i);
 
         _retryCanvas.SetActive(false);
 
+    }
+
+    public void SetDeck(int i)
+    {
+        _currentDeck = i;
     }
 }
