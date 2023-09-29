@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e81c0ce91a023834cb911b43106c91d1, type: 3}
+  m_Name: Shiv
+  m_EditorClassIdentifier: 
+  Name: Shiv
+  Energy: 0
+  Type: ATQ
+  Descryption: Ataque 4
+  Image: {fileID: 7482667652216324306, guid: 880a9256b7ed96245bcce074db957223, type: 3}
+  Damage: 4
+  Shield: 0
+  Poison: 0
+  Strength: 0
